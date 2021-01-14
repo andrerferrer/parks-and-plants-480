@@ -1,7 +1,8 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= @garden.banner_url %>);">
   <div class="container">
     <h1> <%= @garden.name %> </h1>
-    <a class="btn btn-flat" href="#">Apply now</a>
+    <%= link_to 'Edit', edit_garden_path(@garden), class: "btn btn-primary" %>
+    <%= link_to 'Back', gardens_path, class: "btn btn-primary" %>
   </div>
 </div>
 
@@ -21,14 +22,11 @@
 
 
 <div class="container">
-
-  <%= simple_form_for [ @garden, @plant ] do |f| %>
-      <%= f.input :name %>
-      <%= f.input :image_url %>
-      <%= f.submit %>
-  <% end %>
-
+  <div class="form-wrapper">
+    <%= simple_form_for [ @garden, @plant ] do |f| %>
+        <%= f.input :name %>
+        <%= f.input :image_url %>
+        <%= f.submit %>
+    <% end %>
+  </div>
 </div>
-
-<%= link_to 'Edit', edit_garden_path(@garden) %> |
-<%= link_to 'Back', gardens_path %>
