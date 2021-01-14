@@ -1,24 +1,12 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+To run it:
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+    git clone git@github.com:andrerferrer/parks-and-plants-480.git gardens-and-plants
+    cd gardens-and-plants
+    bundle install
+    yarn install
+    rails db:create db:migrate db:seed
+    rails s
+```
