@@ -11,9 +11,9 @@
     <div class="plant">
       <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= plant.image_url %>)">
         <%= plant.name %>
+        <%= link_to "❌", plant_path(plant), method: :delete, data: { confirm: 'are you sure?' }, class: "btn-delete" %>
       </div>
       <%# Verb here by default is GET %>
-      <%= link_to "❌", plant_path(plant), method: :delete, data: { confirm: 'are you sure?' } %>
     </div>
   <% end %>
 
